@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+int o,t,a,u;
+float v,s;
+clrscr();
+printf("enter velocity");
+scanf("enter occelration");
+scanf("%d",&o);
+printf("enter time");
+scanf("%d",&t);
+
+v=u+(a*t);
+s=u+(a*t*t);
+printf("\n velocity=%d",v);
+printf("\ndistannce=%d",s);
+getch();
+return 0;
+}

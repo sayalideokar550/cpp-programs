@@ -1,0 +1,95 @@
+#include<stdio.h>
+#define MAX 5
+struct queue
+{
+	int a[MAX];
+	int front,rear;
+}*q;
+void intiq()
+{
+	q->front=q->rear=-1;
+}
+int isempty()
+{
+	if(q->front==-1)
+	  return 1;
+	else
+	  return 0;
+}
+int isfull()
+{
+	if((q->front==0&&q->rear==MAX-1)||(q->front==q->rear+1))
+	 return 1;
+	else
+	 return 0;
+}
+void insert(int num)
+{
+	if(isfull())
+	 {
+		printf("queue is overflow");
+	 }
+	 else
+	  {
+		if(q->front==-1)
+	  {
+		    q->front=0;
+	      }
+	       q->rear=(q->rear+1)%MAX;
+	      q->a[q->rear]=num;
+	  printf("insert succ...");
+	  }
+}
+void del()
+{
+	int val;
+	if(isempty())
+	 {
+		printf("queue is underflow");
+	 }
+	 else
+	 {
+		val=q->a[q->front];
+		if(q->front==q->rear)
+		 {
+			q->front=q->rear=-1;
+		 }
+		 q->front=(q->front+1)%MAX;
+		 printf("dele succ..%d",val);
+	 }
+}
+void disp()
+{
+	int i;
+    i=q->front;
+     printf("%d\t",q->a[i]);
+     do
+	 {
+		 i=i+1%MAX;
+		printf("%d\t",q->a[i]);
+
+	 }while(i!=q->rear);
+}
+int main()
+{
+	int num,ch;
+	 clrscr();
+	 intiq();
+	do{
+		printf("\n 1:insert \n 2:delete \n 3:display:");
+		scanf("%d",&ch);
+		switch(ch)
+		{
+			case 1:printf("enter number:");
+			       scanf("%d",&num);
+			       insert(num);
+			       break;
+		    case 2:del();
+			   break;
+		    case 3:disp();
+
+		}
+	}while(ch<4);
+	getch();
+	}
+
