@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+int a[10][10],i,j,s=0,r,c;
+clrscr();
+printf("enter number of rows and clos");
+scanf("%d%d",&r,&c);
+printf("enter matrix");
+for(i=0;i<r;i++)
+{
+scanf("%d",&a[i][j]);
+}
+printf("sum=");
+for(j=0;j<c;j++)
+{
+s=s+a[i][j];
+}
+printf("%d",&s);
+getch();
+return 0;
+}

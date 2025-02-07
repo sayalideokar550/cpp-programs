@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+   int n;
+   char ch,a;
+    
+   printf("enter limit");
+   scanf("%d",&n);
+   printf("enter character");
+   scanf("%s",&ch);
+   a=display(n,ch);
+      printf("%c",a);
+   getch();
+}
+ display(int n,char ch)
+{
+      int i;
+   for(i=1;i<=n;i++)
+     a=++c;
+     return a;
+ }

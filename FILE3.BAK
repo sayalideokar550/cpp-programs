@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	FILE *f1;
+	int num,n;
+	clrscr();
+	f1=fopen("num.txt","r");
+	if(f1==NULL)
+	{
+		printf("file not found");
+		exit(0);
+	}
+	printf("enter number to search");
+	scanf("%d",&n);
+	while(!feof(f1))
+	{
+		fscanf(f1,"%d",&num);
+		if(num==n)
+		flag=1;
+		break;
+	}
+	if(flag==1)
+	    printf("number is found");
+	else
+	printf("number not found");
+	fclose(f1);
+	getch();
+}

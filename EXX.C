@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{   FILE *f1;
+   char ch,s1[20];
+   int c1=0,c2=0,c3=0 ;
+   printf("enter file name");
+   scanf("%s",&s1);
+   f1=fopen("s1","r");
+
+   if(f1==NULL)
+   {
+       printf("file not found");
+       getch();
+       exit(0);
+   }
+    while(!feof(f1))
+   {
+   ch=fgetc(f1);
+   if((ch>='A'&& ch<='Z')||(ch>='a'&& ch<='z'))
+	  c1=c1+1;
+   if(ch>=' '|| ch=='\n')
+	  c2=c2+1;
+    if(c3=='\n')
+	  c3=c3+1;
+    }
+    fclose(f1);
+
+    printf("\n char count=%d",c1);
+    printf("\nword  count=%d",c2);
+    printf("\nline count=%d",c3);
+
+   getch();
+}

@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+	FILE *f1,*f2;
+	char ch,s1[20];
+	clrscr()
+	printf("enter file name");
+	scanf("%s",&s1);
+	f1=fopen(s1,"r");
+	f2=fopen("11.c","w");
+	while(!feof(f1));
+	{   ch=fgetc(f1);
+	fputc(isupper(ch)f2);
+	       ch=tolower(ch);
+	  else if(islower(ch))
+	       futc(tolower(ch)f2);
+	  else
+	  fputc(ch,f2);
+	  }
+	  fclose(f1);
+	  fclose(f2);
+	  printf("zal");
+	  getch();
+	  }
+
+
+
+
+
+
+	}
+	
+}

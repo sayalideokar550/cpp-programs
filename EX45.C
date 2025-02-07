@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+float l,b,h,a;
+int ch;
+clrscr();
+printf("\n 1 area of square \n 2 area of rectangle \n3 area of tringle");
+printf("\n enetr choise");
+scanf("%d",&ch);
+switch(ch)
+{
+case 1:printf("enter length");
+       scanf("%f",&l);
+       a=l*l;
+       printf("area of square=%f",a);
+       break;
+case 2:printf("enter length and breath");
+       scanf("%f%f",&l,&b);
+       a=l*b;
+       printf("area of rectangle=%f",a);
+       break;
+case 3:printf("enter base and height");
+	scanf("%f%f",&b,&h);
+	a=0.5*b*h;
+	printf("area of tringle=%f",a);
+	getch();
+	return 0;
+	}
+	}
